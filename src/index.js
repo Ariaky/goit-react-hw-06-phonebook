@@ -4,10 +4,14 @@ import { Provider } from 'react-redux';
 import { store } from './store/store'; // імпортуйте ваш створений store
 import { App } from './components/App';
 import './index.css';
+import { PersistGate } from 'redux-persist/integration/react';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById('root')
+  <React.StrictMode>
+    <Provider store={store}>
+      <PersistGate persistor={persistor} loading={null}>
+        <App />
+      </PersistGate>
+    </Provider>
+  </React.StrictMode>
 );
