@@ -25,5 +25,5 @@ export const { addContact, deleteContact, updateFilter } = contactSlice.actions;
 /*export default contactSlice.reducer;*/
 export const contactsReducer = persistReducer(
   persistConfig,
-  contactsSlice.reducer
+  contactSlice.reducer
 );
