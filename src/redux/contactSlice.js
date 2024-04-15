@@ -2,10 +2,11 @@ import { createSlice } from '@reduxjs/toolkit';
 import { persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
-const initialState = {
+import initialState from '../components/data/contacts.json'
+/*const initialState = {
   contacts: [],
   filter: ''
-};
+};*/
 
 const contactSlice = createSlice({
   name: 'contacts',
