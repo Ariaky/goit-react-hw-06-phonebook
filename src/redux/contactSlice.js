@@ -1,8 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
+import { nanoid } from 'nanoid/non-secure';
 
-import initialState from '../components/data/contacts.json'
+import initialContacts from '../components/data/contacts.json'
 /*const initialState = {
   contacts: [],
   filter: ''
@@ -10,7 +11,7 @@ import initialState from '../components/data/contacts.json'
 
 const contactSlice = createSlice({
   name: 'contacts',
-  initialState,
+  initialState: { list: initialContacts},
   reducers: {
     addContact(state, action) {
       state.contacts.push(action.payload);
