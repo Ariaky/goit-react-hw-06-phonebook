@@ -16,7 +16,9 @@ export const App = () => {
 
       <h2 className={css.title}>Contacts</h2>
       <Filter />
-      <ContactList contacts={contacts} />
+      <ContactList 
+      /*contacts={contacts}*/
+       />
     </div>
   );
 };
