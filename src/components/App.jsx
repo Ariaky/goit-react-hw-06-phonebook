@@ -1,13 +1,13 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+/*import React from 'react';
+import { useSelector } from 'react-redux';*/
 import { ContactForm } from './ContactForm/ContactForm';
 import { ContactList } from './ContactList/ContactList';
 import { Filter } from './Filter/Filter';
 import css from './App.module.css';
 
 export const App = () => {
-  const contacts = useSelector(state => state.contacts.contacts);
-  const filter = useSelector(state => state.contacts.filter);
+ /* const contacts = useSelector(state => state.contacts.list);
+  const filter = useSelector(state => state.contacts.filter);*/
 
   return (
     <div className={css.wrapper}>
