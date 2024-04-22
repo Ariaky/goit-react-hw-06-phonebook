@@ -8,7 +8,8 @@ import css from './ContactForm.module.css';
 export const ContactForm = () => {
   const dispatch = useDispatch();
   const [formData, setFormData] = useState({ name: '', number: '' });
-
+  const nameId = nanoid();
+  const tagId = nanoid();
   const handleChange = e => {
     const { name, value } = e.currentTarget;
     setFormData(prevData => ({ ...prevData, [name]: value }));
